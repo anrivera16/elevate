@@ -1,0 +1,44 @@
+{% load static %}
+{% load i18n %}
+{% with product_config.product as product %}
+<div class="pg-card h-100">
+  <div class="pg-card-image">
+    <figure class="image pg-ratio-3x2">
+      <img class="img-fluid" src="{{ product_config.image_url }}" alt="{{ product.name }}">
+    </figure>
+  </div>
+  <div class="pg-card-body mt-2" style="display: flex; flex-direction: column; justify-content: space-between;">
+    <div>
+      <h3 class="pg-title">{{ product.name }}</h3>
+      <p class="pg-subtitle">
+        {{ product_config.overview }}
+      </p>
+    </div>
+    <div style="display: flex; justify-content: space-between; align-items: baseline;">
+      {% if product.default_price %}
+      <div class="mt-2">{{ product_config.price.human_readable_price }}</div>
+      <div class="display: flex;">
+        <a href="{% url 'ecommerce:purchase_product' product_config.slug %}" class="pg-button-secondary" style="white-space: nowrap;">
+          <span>Buy</span>
+          <span class="pg-icon">
+            <i class="fa fa-angle-double-right"></i>
+          </span>
+        </a>
+      </div>
+      {% else %}
+        <div class="mt-2">
+          {% translate "This product does not yet have a price and is so unavailable for purchase." %}
+        </div>
+      {% endif %}
+      {% if product_config.owned %}
+        <a href="{% url 'ecommerce:access_product' product_config.slug %}" class="pg-button-primary" style="white-space: nowrap;">
+          <span>{% translate "Get" %}</span>
+          <span class="pg-icon">
+            <i class="fa fa-angle-double-right"></i>
+          </span>
+        </a>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endwith %}

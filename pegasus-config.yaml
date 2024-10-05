@@ -1,0 +1,51 @@
+cli:
+  app_directory: apps
+  base_model: apps.teams.models.BaseTeamModel
+  module_path: apps
+  template_directory: templates
+  use_teams: true
+default_context:
+  _pegasus_version: 2024.9.3
+  ai_chat_mode: llm
+  ai_image_mode: none
+  author_name: 23andrew16
+  ci: github_actions
+  css_framework: tailwind
+  css_theme: default
+  database: postgres
+  deploy_platform: heroku_docker
+  description: Elevate Hormone Therapy
+  docker_setup: default
+  domain_name: localhost:8000
+  email: 23andrew16@gmail.com
+  enable_github_login: n
+  enable_google_login: y
+  enable_twitter_login: n
+  front_end_framework: react
+  include_static_files: y
+  marketing_email_platform: mailchimp
+  post_process: y
+  project_name: Josh Dowdy
+  project_slug: elevate
+  standalone_front_end: vite
+  stripe_payment_mode: checkout
+  subscription_billing_model: default
+  subscription_pricing_ui: in_app
+  use_2fa: y
+  use_admin_docs: y
+  use_api_auth: n
+  use_api_keys: y
+  use_async_example: n
+  use_cloud_media_storage: n
+  use_debug_toolbar: n
+  use_docker: y
+  use_ecommerce_example: y
+  use_examples: y
+  use_health_checks: y
+  use_impersonation: y
+  use_sentry: y
+  use_subscriptions: y
+  use_teams: y
+  use_teams_example: y
+  use_translations: y
+  use_wagtail: y
