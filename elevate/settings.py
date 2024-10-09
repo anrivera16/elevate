@@ -398,7 +398,7 @@ CORS_ALLOWED_ORIGINS = env.list("CORS_ALLOWED_ORIGINS", default=["http://localho
 
 
 SPECTACULAR_SETTINGS = {
-    "TITLE": "Josh Dowdy",
+    "TITLE": "Elevate",
     "DESCRIPTION": "Elevate Hormone Therapy",
     "VERSION": "0.1.0",
     "SERVE_INCLUDE_SCHEMA": False,
@@ -452,7 +452,7 @@ WAFFLE_FLAG_MODEL = "teams.Flag"
 
 # replace any values below with specifics for your project
 PROJECT_METADATA = {
-    "NAME": gettext_lazy("Josh Dowdy"),
+    "NAME": gettext_lazy("Elevate"),
     "URL": "http://localhost:8000",
     "DESCRIPTION": gettext_lazy("Elevate Hormone Therapy"),
     "IMAGE": "https://upload.wikimedia.org/wikipedia/commons/2/20/PEO-pegasus_black.svg",
