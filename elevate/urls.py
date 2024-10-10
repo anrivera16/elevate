@@ -47,6 +47,7 @@ team_urlpatterns = [
     path("subscription/", include(subscriptions_team_urls)),
     path("team/", include(single_team_urls)),
     path("example/", include("apps.teams_example.urls")),
+    path("test-page/", include("apps.test_page.urls")),
 ]
 
 urlpatterns = [
