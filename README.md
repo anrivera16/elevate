@@ -1,5 +1,3 @@
-# Josh Dowdy
-
 Elevate Hormone Therapy
 
 ## Installation - Docker
