@@ -1,11 +1,11 @@
 from django.urls import reverse
 from django.views.generic import ListView, CreateView, UpdateView, DetailView, DeleteView
 from django.utils.translation import gettext_lazy as _
-from .models import Player
+from ..teams_example.models import Player
 from ..teams.mixins import LoginAndTeamRequiredMixin
 
 
-class PlayerViewMixin(LoginAndTeamRequiredMixin):
+class TestPlayerViewMixin(LoginAndTeamRequiredMixin):
     """
     Mixin class for all views in the example app.
     """
@@ -19,7 +19,7 @@ class PlayerViewMixin(LoginAndTeamRequiredMixin):
         return context
 
 
-class PlayerListView(PlayerViewMixin, ListView):
+class TestPlayerListView(TestPlayerViewMixin, ListView):
     pass
 
 
